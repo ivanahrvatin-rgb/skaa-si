@@ -1,0 +1,528 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SKAA Symposium – Submit an abstract</title>
+<meta name="description" content="Submit an abstract for the SKAA 2027 Poster Battle – online submission form.">
+<link rel="canonical" href="https://www.skaa.si/submission.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SKAA 2027 Symposium">
+<meta property="og:title" content="SKAA Symposium – Submit an abstract">
+<meta property="og:description" content="Submit an abstract for the SKAA 2027 Poster Battle – online submission form.">
+<meta property="og:url" content="https://www.skaa.si/submission.html">
+<meta property="og:image" content="https://www.skaa.si/assets/og-image.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.ico" sizes="32x32">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#2a8a99">
+<link rel="preload" href="fonts/montserrat-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="fonts/fonts.css">
+<style>
+/* Layout: full-width bands (hero, sponsors, archive, forms) with a 1120px inner column; outlined "flyer boxes" carry the 2025 visual language. */
+:root{
+  color-scheme:light;
+  --bg:#f3fafb; --bg2:#ffffff; --fg:#1b3338; --muted:#527178;
+  --teal:#2a8a99; --teal-deep:#1f4a52; --aqua:#7fd6e0; --aqua-soft:#d9f1f4;
+  --line:#b9dde3; --lime:#dbe98f; --box:#ffffff; --ok:#1f7a4a;
+  --display:"Montserrat",system-ui,sans-serif; --body:"Source Sans 3","Segoe UI",system-ui,sans-serif;
+}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:17px;line-height:1.5;margin:0}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg2)}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;line-height:1.15;margin:0}
+h2{font-size:clamp(1.5rem,3vw,2.1rem);font-weight:800;color:var(--teal-deep);text-transform:uppercase;letter-spacing:.02em}
+h3{font-size:1.15rem;font-weight:800;color:var(--teal-deep)}
+.h-link{color:inherit;text-decoration:none;border-bottom:4px solid var(--aqua)}
+.h-link:hover{color:var(--teal)}
+p{margin:0}
+a{color:var(--teal)}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.band{padding-block:56px}
+.band.alt{background:var(--bg2)}
+.eyebrow{font-family:var(--display);font-size:.75rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--teal)}
+.sect-head{display:grid;gap:8px;margin-bottom:28px;max-width:62ch}
+.sect-head p{color:var(--muted)}
+@media (min-width:700px){.sect-head h2{text-wrap:nowrap;white-space:nowrap}}
+.btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--display);font-weight:800;font-size:.9rem;letter-spacing:.04em;text-transform:uppercase;padding:14px 22px;border-radius:999px;text-decoration:none;cursor:pointer;border:3px solid var(--teal);background:var(--teal);color:#fff;transition:transform .15s}
+.btn.ghost{background:transparent;color:var(--teal-deep);border-color:var(--teal-deep)}
+.btn:hover{transform:translateY(-1px)}
+.btn:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible,a:focus-visible{outline:3px solid var(--aqua);outline-offset:2px}
+.note{font-size:.95rem;color:var(--muted)}
+.todo{display:inline-block;font-family:var(--display);font-size:.7rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;background:#ffe9a8;color:#5a4300;padding:3px 8px;border-radius:4px;vertical-align:middle}
+
+/* header */
+.uc{background:var(--lime);color:var(--teal-deep);border-bottom:1px solid #c9d87a}
+.uc .wrap{display:flex;align-items:center;justify-content:center;gap:10px;padding-top:7px;padding-bottom:7px;font-family:var(--display);font-weight:800;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;text-align:center}
+.uc i{flex:none;width:8px;height:8px;border-radius:50%;background:var(--teal-deep);box-shadow:0 0 0 3px rgba(31,74,82,.18)}
+.uc span b{font-weight:600;letter-spacing:.03em;text-transform:none;font-size:.78rem}
+@media (max-width:600px){.uc .wrap{font-size:.66rem;letter-spacing:.06em}}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--bg2);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:6px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--teal-deep);font-family:var(--display)}
+.brand-mark{font-weight:900;font-size:clamp(2.6rem,4.5vw,3.9rem);letter-spacing:-.06em;color:var(--teal);line-height:.85;display:block}
+.brand-mark .k{color:var(--teal-deep);margin-right:-.05em}
+.brand-mark .aa{letter-spacing:-.12em;color:var(--teal)}
+.brand-mark .s{color:var(--teal)}
+header .wrap{flex-wrap:wrap}
+nav{flex:1;min-width:0}
+nav ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:2px 2px;justify-content:flex-end}
+nav a{display:inline-block;text-decoration:none;color:var(--teal-deep);font-family:var(--display);font-weight:800;font-size:.66rem;letter-spacing:.04em;text-transform:uppercase;padding:8px 6px;white-space:nowrap;border-radius:999px;border-bottom:3px solid transparent;line-height:1}
+nav a:hover{color:var(--teal);background:var(--aqua-soft)}
+/* drop-down sub-menu (Abstracts) */
+nav li.has-sub{position:relative}
+nav li.has-sub>a::after{content:"";display:inline-block;width:5px;height:5px;margin:0 0 2px 5px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg)}
+nav ul.sub{display:none;position:absolute;top:100%;left:0;flex-direction:column;align-items:stretch;gap:2px;min-width:200px;margin:0;padding:6px;background:var(--bg2);border:1px solid var(--line);border-radius:10px;box-shadow:0 10px 24px rgba(31,74,82,.16);z-index:3}
+nav li.has-sub:hover>ul.sub,nav li.has-sub:focus-within>ul.sub{display:flex}
+nav ul.sub a{display:block;font-size:.7rem;padding:9px 12px;border-radius:8px}
+@media (max-width:1000px){nav ul.sub{left:50%;transform:translateX(-50%)}}
+.reg-btn{flex:none;font-family:var(--display);font-weight:900;font-size:1rem;letter-spacing:.06em;text-transform:uppercase;color:#fff;background:var(--teal);border:3px solid var(--teal);border-radius:999px;padding:12px 24px;text-decoration:none;white-space:nowrap;transition:box-shadow .15s,transform .15s}
+/* the two header buttons: Abstracts (with its drop-down) and Registration */
+.ctas{display:flex;align-items:center;gap:10px;flex:none}
+.ctas .has-sub{position:relative}
+.abs-btn{background:var(--teal-deep);border-color:var(--teal-deep)}
+.abs-btn:hover{background:var(--teal);border-color:var(--teal);box-shadow:3px 3px 0 var(--lime)}
+.abs-btn::after{content:"";display:inline-block;width:6px;height:6px;margin:0 0 3px 7px;border-right:2.5px solid currentColor;border-bottom:2.5px solid currentColor;transform:rotate(45deg)}
+.ctas ul.sub{display:none;position:absolute;top:100%;right:0;flex-direction:column;align-items:stretch;gap:2px;min-width:230px;margin:4px 0 0;padding:6px;list-style:none;background:var(--bg2);border:1px solid var(--line);border-radius:10px;box-shadow:0 10px 24px rgba(31,74,82,.16);z-index:3}
+.ctas .has-sub:hover>ul.sub,.ctas .has-sub:focus-within>ul.sub{display:flex}
+.ctas ul.sub a{display:block;text-decoration:none;font-family:var(--display);font-weight:800;font-size:.72rem;letter-spacing:.04em;text-transform:uppercase;color:var(--teal-deep);padding:9px 12px;border-radius:8px}
+.ctas ul.sub a:hover{color:var(--teal);background:var(--aqua-soft)}
+.ctas ul.sub .sub-soon{display:block;font-family:var(--display);font-weight:800;font-size:.72rem;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);padding:9px 12px;cursor:default}
+.reg-btn:hover{background:var(--teal-deep);border-color:var(--teal-deep);box-shadow:3px 3px 0 var(--aqua);transform:translate(-1px,-1px)}
+@media (max-width:1000px){
+  header .wrap{flex-direction:column;align-items:stretch;gap:8px}
+  nav ul{justify-content:center}
+  .reg-btn{align-self:center}
+  .ctas{align-self:center;flex-wrap:wrap;justify-content:center}
+}
+
+/* hero: the flyer's pale geometric field */
+.hero{position:relative;overflow:hidden;background:
+  linear-gradient(135deg,rgba(127,214,224,.35) 0 50%,transparent 50%) 0 0/420px 420px no-repeat,
+  linear-gradient(225deg,rgba(127,214,224,.25) 0 50%,transparent 50%) 100% 100%/360px 360px no-repeat,
+  linear-gradient(180deg,var(--aqua-soft),var(--bg));padding-block:32px 36px}
+.hero .wrap{display:grid;gap:28px}
+.hero-row{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:28px;align-items:start;margin-top:14px}
+.hero-info{min-width:0}
+.hero-main{min-width:0}
+.hero-side{display:grid;gap:14px;justify-items:end;min-width:0}
+.slogan{display:grid;justify-items:end;text-align:right;font-family:var(--display);font-weight:900;text-transform:uppercase;line-height:.9;letter-spacing:-.04em;font-size:clamp(2.4rem,5.2vw,4.2rem);color:var(--teal)}
+.slogan .to{color:var(--teal-deep)}
+.journey{width:100%;max-width:300px;justify-self:end}
+.journey svg{width:100%;height:auto;display:block;overflow:visible}
+.jlab{font-family:var(--body);font-weight:600;font-size:13px;letter-spacing:.22em;text-transform:uppercase;fill:var(--teal-deep)}
+.jdate{font-family:var(--display);font-weight:900;font-size:42px;letter-spacing:-.02em}
+.jmon{font-family:var(--display);font-weight:800;font-size:19px;text-transform:uppercase;letter-spacing:.04em}
+.jms{font-family:var(--display);font-weight:800;font-size:12px;letter-spacing:.06em;text-transform:uppercase;fill:var(--teal-deep)}
+.jend{font-family:var(--display);font-weight:900;font-size:17px;letter-spacing:.04em;text-transform:uppercase;fill:var(--teal-deep)}
+.jcap{font-family:var(--body);font-weight:600;font-size:12px;letter-spacing:.12em;text-transform:uppercase;fill:var(--muted)}
+.jtag{font-family:var(--body);font-weight:600;font-size:14px;letter-spacing:.18em;text-transform:uppercase;fill:var(--teal-deep)}
+/* text logo (edit the year in .year and .l2 for the next edition) */
+.logo{display:grid;grid-template-columns:auto auto auto auto;justify-content:start;align-items:center;gap:0 24px;max-width:1060px;font-family:var(--display)}
+.logo-slogan{display:grid;justify-items:start;font-weight:900;font-size:clamp(1.9rem,4vw,3rem);line-height:.88;letter-spacing:-.05em;text-transform:uppercase;color:var(--teal);padding-left:18px;margin-left:6px;border-left:4px solid var(--aqua)}
+.logo-slogan .to{color:var(--teal-deep)}
+.logo-mark{display:grid;justify-items:end;line-height:.82}
+.logo-mark .word{font-weight:900;font-size:clamp(3rem,6vw,4.4rem);letter-spacing:-.06em;color:var(--teal);display:inline-flex}
+.logo-mark .k{color:var(--teal-deep);margin-right:-.05em}
+.logo-mark .aa{letter-spacing:-.12em;color:var(--teal)}
+.logo-mark .year{font-weight:900;font-size:clamp(1.5rem,3vw,2.3rem);color:var(--teal-deep);letter-spacing:-.02em;margin-top:.08em}
+.logo-dots{width:30px;height:100%;min-height:120px;background:
+  repeating-linear-gradient(to bottom,var(--aqua) 0 8px,transparent 8px 13px) 0 0/7px 100% no-repeat,
+  repeating-linear-gradient(to bottom,var(--teal) 0 8px,transparent 8px 13px) 11px 0/7px 100% no-repeat,
+  repeating-linear-gradient(to bottom,var(--teal-deep) 0 8px,transparent 8px 13px) 22px 0/7px 100% no-repeat}
+.logo-text{display:grid;gap:2px;min-width:0}
+.logo-text .l1,.logo-text .l2{white-space:nowrap}
+.logo-text .l1{font-weight:900;font-size:clamp(1.05rem,2.2vw,1.55rem);line-height:1.02;color:var(--teal);text-transform:uppercase;letter-spacing:-.01em}
+.logo-text .l2{font-weight:900;font-size:clamp(1.05rem,2.2vw,1.55rem);line-height:1.05;color:var(--teal-deep);text-transform:uppercase;padding-bottom:6px;border-bottom:4px solid var(--teal);width:fit-content}
+.logo-text .l4{font-family:var(--display);font-weight:700;font-size:clamp(.85rem,1.3vw,.98rem);max-width:28ch;line-height:1.25;color:var(--teal-deep);margin-top:8px;text-wrap:balance}
+@media (max-width:520px){
+  .logo{grid-template-columns:1fr;gap:14px}
+  .logo-slogan{border-left:0;padding-left:0}
+  .logo-mark{justify-items:start}
+  .logo-dots{height:10px;min-height:0;width:100%;background:
+    repeating-linear-gradient(to right,var(--teal) 0 8px,transparent 8px 13px) 0 0/100% 7px no-repeat}
+}
+.hero h1{font-size:clamp(1.3rem,2.6vw,1.75rem);font-weight:800;color:var(--teal-deep);margin-top:22px}
+.when{display:grid;gap:4px;margin-top:4px;font-family:var(--display)}
+.when b{font-size:clamp(1.2rem,2.4vw,1.6rem);font-weight:900;color:var(--teal-deep)}
+.when span{font-weight:600;color:var(--fg)}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.organizers{margin-top:30px;padding-top:18px;border-top:2px solid var(--line)}
+.organizers .row{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:10px}
+.organizers .row{gap:28px}
+.organizers .row a{display:inline-flex;align-items:center}
+.organizers img{height:54px;width:auto;max-width:100%}
+/* flyer boxes */
+.boxes{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.box{border:3px solid var(--teal-deep);border-radius:12px;background:var(--box);padding:18px 16px;text-align:center;font-family:var(--display);font-weight:800;font-size:1rem;color:var(--teal-deep);display:flex;align-items:center;justify-content:center;min-height:84px;box-shadow:4px 4px 0 var(--aqua)}
+.box.wide{grid-column:1/-1}
+
+/* key facts */
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.fact{border-top:4px solid var(--teal);padding-top:12px}
+.fact .eyebrow{color:var(--muted)}
+.fact b{display:block;font-family:var(--display);font-weight:800;font-size:1.2rem;color:var(--teal-deep);margin-top:4px}
+
+/* sponsors */
+.tiers{display:grid;gap:28px}
+.tier h3{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.tier h3::after{content:"";flex:1;height:2px;background:var(--line)}
+.logos{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}
+.logos.big{grid-template-columns:repeat(auto-fill,minmax(260px,1fr))}
+.logos.small{grid-template-columns:repeat(auto-fill,minmax(150px,1fr))}
+.logo-tile{display:flex;align-items:center;justify-content:center;aspect-ratio:5/2;max-width:100%;background:var(--box);border:2px dashed var(--line);border-radius:10px;text-decoration:none;color:var(--muted);font-family:var(--display);font-weight:600;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;padding:14px;transition:border-color .15s}
+.logo-tile:hover{border-color:var(--teal)}
+.logo-tile img{max-height:70px;max-width:85%;object-fit:contain}
+.logo-tile.real{border-style:solid;background:#fff}
+.partners{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:40px}
+.partners .row{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-top:12px}
+.partners .row{gap:28px}
+.partners .row a{display:inline-flex;align-items:center}
+.partners img{height:150px;width:auto;max-width:100%}
+
+/* archive */
+.archive{display:grid;gap:18px;grid-template-columns:repeat(auto-fill,minmax(320px,1fr))}
+.edition{background:var(--box);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:grid;grid-template-rows:auto 1fr}
+.edition .top{background:#fff;padding:18px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:center;min-height:120px}
+.edition .top img{max-width:100%;height:auto;max-height:90px}
+.edition .top.future{background:var(--aqua-soft);color:var(--muted);font-family:var(--display);font-weight:800;font-size:1.6rem;letter-spacing:.04em}
+.edition .body{padding:18px;display:grid;gap:10px;align-content:start}
+.edition .slogan{font-family:var(--display);font-weight:800;color:var(--teal-deep);font-size:1.05rem}
+.edition dl{display:grid;grid-template-columns:auto 1fr;gap:4px 12px;margin:0;font-size:.95rem}
+.edition dt{color:var(--muted)}.edition dd{margin:0}
+.edition .links{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
+.chip{display:inline-flex;align-items:center;gap:6px;font-size:.85rem;font-weight:600;padding:6px 12px;border-radius:999px;border:2px solid var(--teal);color:var(--teal);text-decoration:none;background:transparent}
+.chip.disabled{border-color:var(--line);color:var(--muted);cursor:default}
+details.faculty{margin-top:6px}
+details.faculty summary{cursor:pointer;color:var(--teal);font-weight:600;font-size:.95rem}
+details.faculty ul{columns:2;gap:20px;margin:10px 0 0;padding-left:18px;font-size:.92rem}
+
+/* forms */
+.form-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:40px;align-items:start}
+form{display:grid;gap:22px;min-width:0}
+fieldset{border:1px solid var(--line);border-radius:12px;padding:18px 18px 20px;margin:0;background:var(--box);display:grid;gap:14px;min-width:0}
+legend{font-family:var(--display);font-weight:800;color:var(--teal-deep);padding:0 8px;font-size:1rem;text-transform:uppercase;letter-spacing:.06em}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.row3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
+label.f{display:grid;gap:5px;font-size:.9rem;font-weight:600;color:var(--muted);min-width:0}
+label.f .req{color:#c0392b}
+input[type=text],input[type=email],input[type=tel],select,textarea{width:100%;font:inherit;font-size:1rem;color:var(--fg);background:var(--bg2);border:1.5px solid var(--line);border-radius:8px;padding:10px 12px;min-width:0}
+textarea{min-height:160px;resize:vertical}
+.check{display:flex;gap:10px;align-items:flex-start;font-size:.95rem;font-weight:400;color:var(--fg)}
+.check input{margin-top:4px;width:18px;height:18px;accent-color:var(--teal)}
+.fees{display:grid;gap:8px}
+.fee{display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:center;padding:10px 12px;border:1.5px solid var(--line);border-radius:8px}
+.fee b{font-family:var(--display);font-weight:800;color:var(--teal-deep);font-variant-numeric:tabular-nums}
+.side{display:grid;gap:18px;align-self:start;position:sticky;top:90px}
+.card{background:var(--box);border:1px solid var(--line);border-radius:12px;padding:20px;display:grid;gap:10px}
+.card h3{font-size:1rem;text-transform:uppercase;letter-spacing:.06em}
+.payee{font-size:.95rem;display:grid;grid-template-columns:auto 1fr;gap:4px 12px}
+.payee dt{color:var(--muted)}.payee dd{margin:0;font-weight:600;user-select:all}
+.copy{justify-self:start;font:inherit;font-size:.85rem;font-weight:600;color:var(--teal);background:none;border:1.5px solid var(--teal);border-radius:999px;padding:5px 12px;cursor:pointer}
+.counter{font-size:.85rem;color:var(--muted);text-align:right;font-variant-numeric:tabular-nums}
+.closed{background:var(--aqua-soft);border:3px solid var(--teal-deep);border-radius:12px;padding:22px 24px;display:grid;gap:8px;box-shadow:4px 4px 0 var(--lime);margin-bottom:8px}
+.closed h3{font-size:1.3rem}
+.closed p{margin:0}
+.closed .btn{justify-self:start;margin-top:6px}
+.done{background:var(--aqua-soft);border:2px solid var(--teal);border-radius:12px;padding:18px;display:grid;gap:6px}
+.done b{color:var(--ok);font-family:var(--display)}
+
+/* venue */
+.venue{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center}
+.venue img{width:100%;max-width:100%;height:auto;border-radius:14px;border:3px solid var(--teal-deep);box-shadow:6px 6px 0 var(--aqua)}
+.venue ul{margin:12px 0 0;padding-left:20px;display:grid;gap:6px}
+
+/* welcome letter */
+#about{padding-block:32px}
+.welcome{display:grid;grid-template-columns:1fr 2fr;gap:28px;align-items:start}
+.welcome-head{position:sticky;top:90px;display:grid;gap:10px;border-left:4px solid var(--teal);padding-left:18px}
+.welcome-head .sub{font-family:var(--display);font-weight:800;font-size:1.05rem;color:var(--teal-deep);line-height:1.3}
+.welcome-head .sub.muted{font-weight:600;color:var(--muted);font-size:.95rem}
+.welcome-head .motto{font-family:var(--display);font-weight:900;font-size:clamp(1.6rem,3vw,2.2rem);color:var(--teal);text-transform:uppercase;letter-spacing:.02em;line-height:1.05;margin-top:6px}
+.letter{display:grid;gap:12px;max-width:68ch;min-width:0}
+.letter h3{margin-top:10px;font-size:1.25rem}
+.letter .salute{font-family:var(--display);font-weight:800;color:var(--teal-deep)}
+.letter em{color:var(--teal);font-style:normal;font-weight:600}
+.letter .sign{margin-top:6px}
+.letter .cta{margin-top:4px}
+.topics{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.topic{background:var(--box);border:3px solid var(--teal-deep);border-radius:12px;padding:16px;box-shadow:4px 4px 0 var(--aqua);display:grid;gap:6px;font-size:.97rem}
+
+/* faculty */
+.people{display:grid;gap:22px 16px;grid-template-columns:repeat(auto-fill,minmax(150px,1fr))}
+.person{display:grid;justify-items:center;gap:10px;background:none;border:0;padding:0;font:inherit;color:var(--fg);cursor:pointer;text-align:center;min-width:0}
+.person .photo{width:128px;height:128px;max-width:100%;border-radius:50%;overflow:hidden;border:3px solid var(--teal);box-shadow:4px 4px 0 var(--aqua);background:var(--aqua-soft);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:800;font-size:1.8rem;color:var(--teal-deep);transition:transform .15s}
+.person .photo img{width:100%;height:100%;object-fit:cover;display:block}
+.person:hover .photo{transform:translateY(-3px)}
+.person .name{font-family:var(--display);font-weight:800;font-size:.95rem;color:var(--teal-deep);line-height:1.2}
+.person .role{font-size:.82rem;color:var(--muted)}
+.modal{position:fixed;inset:0;z-index:20;background:rgba(15,31,35,.6);display:flex;align-items:center;justify-content:center;padding:max(16px,env(safe-area-inset-left,0px))}
+.modal-box{background:var(--bg2);color:var(--fg);border-radius:16px;max-width:620px;width:100%;max-height:90vh;overflow:auto;padding:28px;display:grid;gap:14px;border-top:6px solid var(--teal);position:relative}
+.modal-head{display:flex;gap:18px;align-items:center}
+.modal-head .photo{width:96px;height:96px;flex:none;border-radius:50%;overflow:hidden;border:3px solid var(--teal);background:var(--aqua-soft);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:800;font-size:1.5rem;color:var(--teal-deep)}
+.modal-head .photo img{width:100%;height:100%;object-fit:cover}
+.modal-head h3{font-size:1.3rem}
+.modal-close{position:absolute;top:12px;right:12px;width:36px;height:36px;border-radius:50%;border:2px solid var(--line);background:var(--bg2);color:var(--fg);font-size:1.2rem;cursor:pointer}
+.modal-box p{max-width:62ch}
+
+footer{background:var(--teal-deep);color:#e6f3f5;padding-block:36px;font-size:.92rem}
+:root[data-theme="dark"] footer,footer{color:#e6f3f5}
+footer .wrap{display:grid;grid-template-columns:1.2fr 1fr 1fr 1fr;gap:24px}
+footer a{color:#aee7ee}
+footer h3{color:#fff;font-size:.9rem;text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px}
+footer .mail{color:#aee7ee;user-select:all}
+
+@media (max-width:860px){
+  .form-grid,.venue,.partners,.welcome,.hero-row{grid-template-columns:1fr}
+  .journey{justify-self:center}
+  .slogan{justify-items:start;text-align:left}
+  .hero-side{justify-items:start}
+  .welcome-head{position:static}
+  footer .wrap{grid-template-columns:1fr 1fr}
+  .side{position:static}
+  .row3{grid-template-columns:1fr 1fr}
+}
+@media (max-width:520px){
+  body{font-size:16px}
+  .boxes,.row2,.row3,.topics{grid-template-columns:1fr}
+  .box{min-height:64px}
+  details.faculty ul{columns:1}
+  .band{padding-block:40px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+<style>img{max-width:100%}[hidden]{display:none!important}
+.authors{display:grid;gap:12px}
+.author-row{display:grid;grid-template-columns:1fr 1fr auto;gap:14px;align-items:end}
+.au-rm{width:40px;height:44px;border:1.5px solid var(--line);border-radius:8px;background:var(--bg2);color:var(--muted);font-size:1.3rem;line-height:1;cursor:pointer}
+.au-rm:hover{border-color:#c0392b;color:#c0392b}
+.au-rm.ghosted{visibility:hidden}
+.author-tools{display:flex;flex-wrap:wrap;align-items:center;gap:12px}
+@media (max-width:520px){.author-row{grid-template-columns:1fr auto}.author-row label:nth-child(2){grid-column:1}.author-row .au-rm{grid-row:1;grid-column:2}}
+</style>
+</head>
+<body>
+<a id="page-top" tabindex="-1" aria-hidden="true" style="position:absolute;top:0;left:0;width:1px;height:1px;overflow:hidden;opacity:0;outline:none"></a>
+<div class="uc" role="status"><div class="wrap"><i aria-hidden="true"></i><span>Website under construction <b>– the programme and details are still being completed and may change.</b></span></div></div>
+<header>
+  <div class="wrap">
+    <a class="brand" href="index.html" title="SKAA – home page" aria-label="SKAA – home page"><span class="brand-mark"><span class="s">S</span><span class="k">K</span><span class="aa">AA</span></span></a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="programme.html">Programme</a></li>
+        <li><a href="faculty.html">Faculty</a></li>
+        <li><a href="sponsors.html">Sponsors</a></li>
+        <li><a href="archive.html">Past editions</a></li>
+        <li><a href="venue.html">Venue</a></li>
+      </ul>
+    </nav>
+    <div class="ctas">
+      <div class="has-sub">
+        <a class="reg-btn abs-btn" href="abstracts.html" aria-haspopup="true">Abstracts</a>
+        <ul class="sub" aria-label="Abstracts">
+          <li><a href="abstracts.html">Submission guidelines</a></li>
+          <li><span class="sub-soon">Submit an abstract – opens shortly</span></li>
+        </ul>
+      </div>
+      <a class="reg-btn" href="registration.html">Registration</a>
+    </div>
+  </div>
+</header>
+<section class="band" id="abstracts">
+  <div class="wrap">
+    <div class="sect-head">
+      <span class="eyebrow">Call for posters</span>
+      <h2>Submit an abstract</h2>
+      <p>Please read the <a href="abstracts.html">submission guidelines</a> before submitting. Poster abstracts only, in English, maximum 500 words. Submission deadline: <b>30 September 2027, 23:59 CET</b>.</p>
+    </div>
+    <div class="form-grid">
+      <div class="closed" id="absClosed">
+        <span class="eyebrow">Not open yet</span>
+        <h3>Abstract submission will open shortly</h3>
+        <p>The online submission form for the SKAA 2027 Poster Battles is not open yet. In the meantime, please prepare your abstract according to the submission guidelines (poster abstracts only, in English, maximum 500 words). Questions: <a href="mailto:abstracts@skaa.si">abstracts@skaa.si</a>.</p>
+        <a class="btn" href="abstracts.html">Submission guidelines</a>
+      </div>
+      <form id="absForm" novalidate hidden>
+        <fieldset>
+          <legend>Presenting author</legend>
+          <div class="row2">
+            <label class="f">Full name <span class="req">*</span><input type="text" id="a-name" name="name" required></label>
+            <label class="f">E-mail <span class="req">*</span><input type="email" id="a-email" name="email" required></label>
+          </div>
+          <label class="f">Institution / Affiliation <span class="req">*</span><input type="text" id="a-inst" name="institution" required></label>
+          <label class="f">Photo of the presenting author (JPG or PNG, portrait, min. 800 × 800 px, max. 5 MB) <span class="req">*</span><input type="file" id="a-photo" name="photo" accept="image/jpeg,image/png" required></label>
+          <p class="note">The photo is used in the abstract book. After acceptance you will also receive a personalised graphic with your photo, the title of your poster and the confirmation of acceptance, which you can share on your social media.</p>
+        </fieldset>
+        <fieldset>
+          <legend>Abstract</legend>
+          <label class="f">Title <span class="req">*</span><input type="text" id="a-title" name="title" required></label>
+          <div class="authors" id="authors">
+            <div class="author-row">
+              <label class="f"><span class="au-label">Author 1 – presenting author</span> <span class="req">*</span><input type="text" class="au-name" name="authors[]" required placeholder="Surname Name"></label>
+              <label class="f">Affiliation <span class="req">*</span><input type="text" class="au-aff" name="affiliations[]" required placeholder="Department, Institution, City, Country"></label>
+              <button type="button" class="au-rm ghosted" aria-label="Remove author" title="Remove author">×</button>
+            </div>
+          </div>
+          <div class="author-tools"><button type="button" class="copy" id="addAuthor">+ Add author</button><span class="note">Up to 8 authors, in the order they should appear.</span></div>
+          <div class="row2">
+            <label class="f">Category <span class="req">*</span>
+              <select id="a-topic" name="category" required><option value="">Select…</option><option>Shoulder orthopaedics</option><option>Knee orthopaedics</option><option>Rehabilitation</option></select></label>
+            <label class="f">Study type <span class="req">*</span><select id="a-type" name="study_type" required><option value="">Select…</option><option>Original research</option><option>Systematic review / meta-analysis</option><option>Case report / case series</option><option>Technical note</option></select></label>
+          </div>
+          <label class="f">Structured abstract (Background and aim, Methods, Results, Conclusion – or Background, Case description, Conclusions for case reports) <span class="req">*</span>
+            <textarea id="a-text" name="abstract" required maxlength="4500"></textarea>
+            <span class="counter"><span id="wc">0</span> / 500 words</span>
+          </label>
+          <label class="f">Keywords (3–5, separated by commas) <span class="req">*</span><input type="text" id="a-keys" name="keywords" required></label>
+        </fieldset>
+        <fieldset>
+          <legend>Poster Battle</legend>
+          <p class="note">The four highest-scoring abstracts in each category are invited to the Poster Battle: a 5-minute presentation, discussion and voting by the audience and the expert jury. The winner of each category receives a two-week fellowship with the SKAA faculty.</p>
+          <p class="note" style="font-weight:600;color:var(--fg)">Would you like to take part in the Poster Battle if your abstract is selected? <span class="req">*</span></p>
+          <label class="check"><input type="radio" name="poster_battle" value="yes" required> Yes, I would like to take part in the Poster Battle.</label>
+          <label class="check"><input type="radio" name="poster_battle" value="no" required> No, I would like to present my poster only.</label>
+        </fieldset>
+        <fieldset>
+          <legend>Declarations</legend>
+          <label class="check"><input type="checkbox" id="a-orig" name="original" required> The abstract is original and all authors approved its submission. <span class="req">*</span></label>
+          <label class="check"><input type="checkbox" id="a-reg" name="will_register" required> The presenting author will register for the symposium by 22 October 2027 and present the poster in person. <span class="req">*</span></label>
+          <label class="check"><input type="checkbox" id="a-gdpr" name="gdpr" required> I agree to the processing of my personal data for the purpose of abstract review and the symposium. <span class="req">*</span></label>
+        </fieldset>
+        <div><button class="btn" type="submit">Submit abstract</button></div>
+        <div class="done" id="absDone" hidden>
+          <b>Abstract received</b>
+          <p>Thank you. The Scientific Committee will review your abstract and notify <span id="absMail"></span> by 15 October 2027.</p>
+        </div>
+      </form>
+      <aside class="side">
+        <div class="card">
+          <h3>Key dates</h3>
+          <dl class="payee">
+            <dt>Submission opens</dt><dd>1 December 2026</dd>
+            <dt>Deadline</dt><dd>30 September 2027, 23:59 CET</dd>
+            <dt>Notification</dt><dd>by 15 October 2027</dd>
+            <dt>Author registration</dt><dd>by 22 October 2027</dd>
+            <dt>Poster Battles</dt><dd>4 November (shoulder) · 5 November (knee)</dd>
+          </dl>
+        </div>
+        <div class="card">
+          <h3>Format</h3>
+          <p class="note">Title max. 20 words · up to 8 authors · structured text max. 500 words · 3–5 keywords · English · no tables, figures or references. The poster itself is not submitted with the abstract; its format will be announced with the notification.</p>
+          <p class="note"><a href="abstracts.html">Read the submission guidelines</a> · <a href="assets/SKAA2027_Instructions_for_authors.pdf" target="_blank" rel="noopener">PDF</a></p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="wrap">
+    <div>
+      <h3>Conference secretariat</h3>
+      <p>Teja Kučina<br>Phone: <span class="mail">+386 31 290 660</span><br>E-mail: <span class="mail">info@skaa.si</span></p>
+      <p style="margin-top:8px">For company group bookings, please request further instructions from the registration office.</p>
+    </div>
+    <div>
+      <h3>Organising committee</h3>
+      <p>Ivana Hrvatin<br><span class="mail">ivana.hrvatin@ob-valdoltra.si</span></p>
+      <p style="margin-top:8px">Benjamin Marjanovič<br><span class="mail">benjamin.marjanovic@ob-valdoltra.si</span></p>
+      <p style="margin-top:8px">Mira Šavora<br><span class="mail">mira.savora@ob-valdoltra.si</span></p>
+    </div>
+    <div>
+      <h3>Ethical MedTech</h3>
+      <p>Compliance assessment in progress.</p>
+      <p style="margin-top:8px"><a href="https://www.ethicalmedtech.eu">ethicalmedtech.eu</a></p>
+    </div>
+    <div>
+      <h3>Site</h3>
+      <p>© 2026 SKAA Symposium. All rights reserved. The content of this website is protected by copyright and may not be reproduced without written permission of the organisers. · <a href="cookies.html">Cookie policy</a></p>
+    </div>
+  </div>
+</footer>
+<script>
+(function(){
+  function validate(form){
+    var ok=true;
+    form.querySelectorAll('[required]').forEach(function(el){
+      var bad = el.type==='checkbox' ? !el.checked : el.type==='radio' ? !form.querySelector('input[name="'+el.name+'"]:checked') : !el.value.trim() || (el.type==='email' && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(el.value));
+      el.style.outline = bad ? '2px solid #c0392b' : '';
+      if(bad && ok){ el.focus(); ok=false; }
+    });
+    return ok;
+  }
+  /* Where the form is sent: the Google Apps Script web app of the Google Sheet "SKAA 2027 – Abstracts"
+     (mail/google-sheets/Code-abstracts.gs, deployed 30 Oct 2026) – the photo is sent as base64 text; the sheet
+     stores the abstract and the photo and sends the confirmation e-mail from abstracts@skaa.si.
+     Set to '' to only show the confirmation box without sending (preview mode).
+     Alternative: '/mail/submit-abstract.php' on the own server (mail/submit-abstract.php.txt). */
+  var ENDPOINT='https://script.google.com/macros/s/AKfycby8pGRc_yofvYwG6dGBJgF7dRvN3NfBqe5s1A2kitFVun8L2iv-B3CEC7rPPn3c9AHxOg/exec';
+  var MAX_PHOTO=5*1024*1024;
+  /* For the Google Sheets endpoint: scales the photo to max. 1600 px and returns it as a JPEG data URL
+     (falls back to the original file if the browser cannot decode the image). */
+  function photoAsDataUrl(file){
+    return new Promise(function(resolve,reject){
+      var url=URL.createObjectURL(file), img=new Image();
+      img.onload=function(){
+        var s=Math.min(1,1600/Math.max(img.naturalWidth,img.naturalHeight));
+        var c=document.createElement('canvas'); c.width=Math.round(img.naturalWidth*s); c.height=Math.round(img.naturalHeight*s);
+        c.getContext('2d').drawImage(img,0,0,c.width,c.height); URL.revokeObjectURL(url);
+        resolve(c.toDataURL('image/jpeg',0.9));
+      };
+      img.onerror=function(){ URL.revokeObjectURL(url); var fr=new FileReader(); fr.onload=function(){ resolve(fr.result); }; fr.onerror=reject; fr.readAsDataURL(file); };
+      img.src=url;
+    });
+  }
+  document.getElementById('absForm').addEventListener('submit',function(e){
+    e.preventDefault();
+    if(this.hidden) return;   /* form closed for now – remove the hidden attribute on the form and the #absClosed box to reopen */
+    var form=this; if(!validate(form)) return;
+    var btn=form.querySelector('button[type=submit]');
+    var photo=document.getElementById('a-photo').files[0];
+    if(photo && photo.size>MAX_PHOTO){ alert('The photo is larger than 5 MB. Please choose a smaller file.'); return; }
+    function showDone(){
+      document.getElementById('absMail').textContent=document.getElementById('a-email').value;
+      document.getElementById('absDone').hidden=false;
+      document.getElementById('absDone').scrollIntoView({behavior:'smooth',block:'center'});
+    }
+    if(!ENDPOINT){ showDone(); return; }
+    btn.disabled=true; btn.textContent='Sending…';
+    var data=new FormData(form);
+    var prepare = (/script\.google\.com/.test(ENDPOINT) && photo)
+      ? photoAsDataUrl(photo).then(function(d){ data.delete('photo'); data.append('photo_base64',d); })
+      : Promise.resolve();
+    prepare.then(function(){ return fetch(ENDPOINT,{method:'POST',body:data,headers:{'Accept':'application/json'}}); })
+      .then(function(r){ return r.ok ? r.json() : Promise.reject(new Error('HTTP '+r.status)); })
+      .then(function(j){ if(j && j.ok){ showDone(); btn.textContent='Abstract sent'; } else { throw new Error((j&&j.error)||'Unknown error'); } })
+      .catch(function(err){ btn.disabled=false; btn.textContent='Submit abstract'; alert('Your abstract could not be sent ('+err.message+'). Please try again or write to abstracts@skaa.si.'); });
+  });
+  var wrap=document.getElementById('authors'), add=document.getElementById('addAuthor'), MAX=8;
+  function renumber(){
+    var rows=wrap.querySelectorAll('.author-row');
+    rows.forEach(function(r,i){ r.querySelector('.au-label').textContent='Author '+(i+1)+(i===0?' – presenting author':''); r.querySelector('.au-rm').classList.toggle('ghosted',i===0); });
+    add.disabled=rows.length>=MAX; add.textContent=rows.length>=MAX?'Maximum 8 authors':'+ Add author';
+  }
+  add.addEventListener('click',function(){
+    var rows=wrap.querySelectorAll('.author-row'); if(rows.length>=MAX) return;
+    var row=rows[0].cloneNode(true);
+    row.querySelectorAll('input').forEach(function(i){ i.value=''; i.style.outline=''; });
+    wrap.appendChild(row); renumber(); row.querySelector('input').focus();
+  });
+  wrap.addEventListener('click',function(e){
+    var b=e.target.closest('.au-rm'); if(!b) return;
+    if(wrap.querySelectorAll('.author-row').length>1){ b.closest('.author-row').remove(); renumber(); }
+  });
+  var ta=document.getElementById('a-text'), wc=document.getElementById('wc');
+  ta.addEventListener('input',function(){
+    var n=ta.value.trim()?ta.value.trim().split(/\s+/).length:0; wc.textContent=n; wc.style.color=n>500?'#c0392b':'';
+  });
+})();
+</script>
+</body>
+</html>

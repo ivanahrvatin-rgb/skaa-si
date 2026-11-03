@@ -1,0 +1,9 @@
+---
+# cPanel Git Version Control: copies the site from the repository into public_html on "Deploy HEAD Commit"
+deployment:
+  tasks:
+    - export DEPLOYPATH=$HOME/public_html
+    - /bin/mkdir -p $DEPLOYPATH/assets/faculty $DEPLOYPATH/fonts
+    - /bin/cp -f *.html *.txt *.xml *.ico *.png faculty-data.js .htaccess $DEPLOYPATH/
+    - /bin/cp -Rf assets/. $DEPLOYPATH/assets/
+    - /bin/cp -Rf fonts/. $DEPLOYPATH/fonts/

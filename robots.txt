@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /speaker.html
+
+Sitemap: https://www.skaa.si/sitemap.xml
