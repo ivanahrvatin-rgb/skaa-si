@@ -298,8 +298,20 @@ footer .mail{color:#aee7ee;user-select:all}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
 <style>img{max-width:100%}[hidden]{display:none!important}
-.fee.auto{grid-template-columns:1fr auto;background:var(--aqua-soft);border-color:var(--teal)}
-.fee.auto>b{font-size:1.35rem}</style>
+/* registration form – one column of fields in a light card, section headings in capitals */
+.regcard{background:var(--box);border:1px solid var(--line);border-radius:12px;padding:26px 24px 28px;display:grid;gap:18px;min-width:0}
+.regcard .fh{font-family:var(--display);font-weight:800;font-size:1.15rem;letter-spacing:.06em;text-transform:uppercase;color:var(--teal-deep);margin:4px 0 0}
+.regcard .stack{display:grid;gap:10px}
+.regcard input[type=text],.regcard input[type=email],.regcard select{background:var(--bg2)}
+.regcard input::placeholder{color:#6b8a90;opacity:1}
+.regcard select:invalid{color:#6b8a90}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.fblock{border-top:1px dashed var(--line);padding-top:14px;display:grid;gap:8px}
+.flabel{font-weight:600;color:var(--fg);margin:0}
+.note.small{font-size:.86rem}
+.regcard .check b{font-family:var(--display);font-weight:800;color:var(--teal-deep)}
+.card p{margin:0}
+.side .card{gap:12px}</style>
 </head>
 <body>
 <a id="page-top" tabindex="-1" aria-hidden="true" style="position:absolute;top:0;left:0;width:1px;height:1px;overflow:hidden;opacity:0;outline:none"></a>
@@ -334,7 +346,7 @@ footer .mail{color:#aee7ee;user-select:all}
     <div class="sect-head">
       <span class="eyebrow">Registration</span>
       <h2>Registration form</h2>
-      <p>Please read the <a href="registration.html">registration information</a> (fees, payment, terms) before registering. Registration is open until 31 October 2027 or until all places are taken and is processed first come, first served; your place is reserved until the payment due date. Fields marked <span class="req">*</span> are required.</p>
+      <p>Registration is open until 31 October 2027 or until all places are taken and is processed first come, first served; your place is reserved until the payment due date. Fields marked <span class="req">*</span> are required.</p>
     </div>
     <div class="form-grid">
       <div class="closed" id="regClosed">
@@ -343,68 +355,43 @@ footer .mail{color:#aee7ee;user-select:all}
         <p>Registration for SKAA 2027 is not open yet. The registration fees, payment terms and deadlines are already published on the registration information page – please check back shortly. For group bookings or questions write to <a href="mailto:info@skaa.si">info@skaa.si</a>.</p>
         <a class="btn" href="registration.html">Registration information</a>
       </div>
-      <form id="regForm" novalidate hidden>
-        <fieldset>
-          <legend>Participant</legend>
-          <div class="row2">
-            <label class="f">First name <span class="req">*</span><input type="text" id="r-first" name="first_name" required autocomplete="given-name"></label>
-            <label class="f">Last name <span class="req">*</span><input type="text" id="r-last" name="last_name" required autocomplete="family-name"></label>
-          </div>
-          <div class="row2">
-            <label class="f">Profession <span class="req">*</span>
-              <select id="r-prof" name="profession" required><option value="">Select…</option><option>Orthopaedic surgeon</option><option>Physician (other specialty)</option><option>Resident</option><option>Physiotherapist</option><option>Kinesiologist</option><option>Nurse / OR staff</option><option>Student</option><option>Industry</option><option>Other</option></select></label>
-            <label class="f">Institution <span class="req">*</span><input type="text" id="r-inst" name="institution" required autocomplete="organization"></label>
-          </div>
-          <label class="f">Address <span class="req">*</span><input type="text" id="r-addr" name="address" required autocomplete="street-address"></label>
-          <div class="row3">
-            <label class="f">Postal code <span class="req">*</span><input type="text" id="r-zip" name="postal_code" required autocomplete="postal-code"></label>
-            <label class="f">City <span class="req">*</span><input type="text" id="r-city" name="city" required autocomplete="address-level2"></label>
-            <label class="f">Country <span class="req">*</span><input type="text" id="r-country" name="country" required autocomplete="country-name"></label>
-          </div>
-          <div class="row2">
-            <label class="f">E-mail <span class="req">*</span><input type="email" id="r-email" name="email" required autocomplete="email"></label>
-            <label class="f">Phone<input type="tel" id="r-phone" name="phone" autocomplete="tel"></label>
-          </div>
-        </fieldset>
+      <form id="regForm" class="regcard" novalidate hidden>
+        <h3 class="fh">Participant</h3>
+        <div class="stack">
+          <label class="vh" for="r-first">Name</label><input type="text" id="r-first" name="first_name" placeholder="Name *" required autocomplete="given-name">
+          <label class="vh" for="r-last">Surname</label><input type="text" id="r-last" name="last_name" placeholder="Surname *" required autocomplete="family-name">
+          <label class="vh" for="r-title">Title</label><input type="text" id="r-title" name="title" placeholder="Title (e.g. MD, PT, Prof.)" autocomplete="honorific-prefix">
+          <label class="vh" for="r-prof">Profession</label>
+          <select id="r-prof" name="profession" required><option value="">Profession *</option><option>Orthopaedic surgeon</option><option>Physician (other specialty)</option><option>Resident</option><option>Physiotherapist</option><option>Kinesiologist</option><option>Nurse / OR staff</option><option>Student</option><option>Industry</option><option>Other</option></select>
+          <label class="vh" for="r-country">Country</label><input type="text" id="r-country" name="country" placeholder="Country *" required autocomplete="country-name">
+          <label class="vh" for="r-email">Email address</label><input type="email" id="r-email" name="email" placeholder="Email address *" required autocomplete="email">
+        </div>
 
-        <fieldset>
-          <legend>Payer's details</legend>
-          <label class="check"><input type="checkbox" id="r-same" name="payer_same" checked> Same as participant</label>
-          <div id="payerFields" hidden style="display:grid;gap:14px">
-            <label class="f">Company / Institution name <span class="req">*</span><input type="text" id="p-name" name="payer_name"></label>
-            <label class="f">Address <span class="req">*</span><input type="text" id="p-addr" name="payer_address"></label>
-            <div class="row3">
-              <label class="f">Postal code<input type="text" id="p-zip" name="payer_postal_code"></label>
-              <label class="f">City<input type="text" id="p-city" name="payer_city"></label>
-              <label class="f">Country<input type="text" id="p-country" name="payer_country"></label>
-            </div>
-            <div class="row2">
-              <label class="f">VAT ID<input type="text" id="p-vat" name="payer_vat" placeholder="SI…"></label>
-              <label class="f">Invoice e-mail<input type="email" id="p-email" name="payer_email"></label>
-            </div>
-          </div>
-        </fieldset>
+        <h3 class="fh">Payer’s details</h3>
+        <div class="stack">
+          <label class="vh" for="p-name">Payer</label><input type="text" id="p-name" name="payer_name" placeholder="Payer (person, company or institution) *" required autocomplete="organization">
+          <label class="vh" for="p-addr">Payer’s full address (street, street number)</label><input type="text" id="p-addr" name="payer_address" placeholder="Payer’s full address (street, street number) *" required autocomplete="street-address">
+          <label class="vh" for="p-place">Place, post code, country</label><input type="text" id="p-place" name="payer_place" placeholder="Place, post code, country *" required>
+          <label class="vh" for="p-vat">Payer’s VAT no. (if company or institution)</label><input type="text" id="p-vat" name="payer_vat" placeholder="Payer’s VAT no. (if company or institution)">
+        </div>
 
-        <fieldset>
-          <legend>Registration fee</legend>
-          <div class="fees" id="feeBox">
-            <div class="fee auto"><span><b id="feeName">Early bird registration</b><br><span class="note" id="feePeriod">until 31 May 2027</span></span><b id="feeAmount">220 EUR</b></div>
-          </div>
+        <div class="fblock">
+          <p class="flabel">Registration fee <span class="req">*</span></p>
+          <label class="check"><input type="checkbox" id="r-feeok" name="fee_confirmed" required> <b id="feeLabel">220,00 EUR – Early bird (until 31 May 2027)</b></label>
+          <p class="note small">(Please confirm with checkbox) · The fee is determined by the date of registration (today: <span id="feeToday"></span>); all fees include VAT.</p>
           <input type="hidden" id="r-fee" name="fee" value="Early bird – 220 EUR">
-          <p class="note" id="feeNote">The fee is determined automatically by the date of registration (today: <span id="feeToday"></span>).</p>
-          <div class="done" id="regClosed" hidden><b>Registration closed</b><p>Online registration for SKAA 2027 closed on 31 October 2027. For late enquiries please contact the conference secretariat at info@skaa.si.</p></div>
-          <label class="check"><input type="checkbox" id="r-feeok" name="fee_confirmed" required> I confirm the registration fee shown above and will pay it within 3 working days after registration. <span class="req">*</span></label>
-        </fieldset>
+          <div class="done" id="regClosedLate" hidden><b>Registration closed</b><p>Online registration for SKAA 2027 closed on 31 October 2027. For late enquiries please contact the conference secretariat at info@skaa.si.</p></div>
+        </div>
 
-        <fieldset>
-          <legend>Personal data</legend>
-          <label class="check"><input type="checkbox" id="r-gdpr" name="gdpr" required> I agree that my personal data are stored and processed for the purpose of registration and organisation of the SKAA Symposium. Data are kept for 5 years and deleted automatically; deletion on request at any time. <span class="req">*</span></label>
-          <label class="check"><input type="checkbox" id="r-news" name="newsletter"> Keep me informed about future SKAA symposia.</label>
-        </fieldset>
+        <div class="fblock">
+          <p class="note small">Due to the GDPR regulation, it is mandatory to consent before submitting a registration. You agree to the storage and processing of the specified personal data for the purpose of making the registration.</p>
+          <label class="check"><input type="checkbox" id="r-gdpr" name="gdpr" required> I agree <span class="req">*</span></label>
+          <p class="flabel" style="margin-top:10px">Legal notice</p>
+          <p class="note small">Your personal data will be stored in the registration database for a period of 5 years. After this period, the database will be automatically deleted. At your request, we can delete your personal data from our database at any time.</p>
+        </div>
 
         <div>
           <button class="btn" type="submit">Submit registration</button>
-          <p class="note" style="margin-top:10px">After submitting the form you will receive a confirmation e-mail with the payment details. The fee must be paid within 3 working days; confirmation of successful payment and registration is sent to your e-mail address within 7 days of registration.</p>
         </div>
         <div class="done" id="regDone" hidden>
           <b>Registration received</b>
@@ -414,17 +401,18 @@ footer .mail{color:#aee7ee;user-select:all}
 
       <aside class="side">
         <div class="card">
-          <h3>Payment by bank transfer</h3>
+          <h3>Payment</h3>
+          <p>Payment is due within 3 working days of registration. Your place will be reserved until the payment deadline. Confirmation of successful payment and registration will be sent by email within 7 days of registration.</p>
+          <p>Please transfer the registration fee to the organiser’s account:</p>
           <dl class="payee">
             <dt>Beneficiary</dt><dd>Zveza društev – Slovensko zdravniško društvo</dd>
             <dt>Address</dt><dd>Dunajska cesta 162, 1000 Ljubljana, Slovenia</dd>
             <dt>VAT ID</dt><dd>SI21976562</dd>
             <dt>IBAN</dt><dd>SI56 0222 2001 9518 588 (NLB d.d.)</dd>
             <dt>SWIFT/BIC</dt><dd>LJBASI2X</dd>
-            <dt>Reference</dt><dd>SKAA 2027 + participant name</dd>
           </dl>
           <button class="copy" type="button" id="copyPayee">Copy beneficiary details</button>
-          <p class="note">Payment is due within 3 working days after registration. All bank transfer fees are covered by the payer. Invoices are issued by Zveza društev – Slovensko zdravniško društvo.</p>
+          <p class="note">All payments should include “SKAA 2027” and the participant’s name. All bank transfer fees must be covered by the payer. Invoices are issued by Zveza društev – Slovensko zdravniško društvo.</p>
         </div>
         <div class="card">
           <h3>Cancellation</h3>
@@ -473,29 +461,22 @@ footer .mail{color:#aee7ee;user-select:all}
   /* registration fee by date (Europe/Ljubljana) – edit the periods here when they change */
   (function(){
     var periods=[
-      {name:'Early bird registration', period:'until 31 May 2027', amount:'220 EUR', until:new Date('2027-06-01T00:00:00+02:00')},
-      {name:'Regular registration', period:'1 June – 30 September 2027', amount:'260 EUR', until:new Date('2027-10-01T00:00:00+02:00')},
-      {name:'Late registration', period:'1 – 31 October 2027', amount:'300 EUR', until:new Date('2027-11-01T00:00:00+01:00')}
+      {name:'Early bird', period:'until 31 May 2027', amount:'220,00 EUR', short:'220 EUR', until:new Date('2027-06-01T00:00:00+02:00')},
+      {name:'Regular', period:'1 June – 30 September 2027', amount:'260,00 EUR', short:'260 EUR', until:new Date('2027-10-01T00:00:00+02:00')},
+      {name:'Late', period:'1 – 31 October 2027', amount:'300,00 EUR', short:'300 EUR', until:new Date('2027-11-01T00:00:00+01:00')}
     ];
     var now=new Date(), cur=null;
     for(var i=0;i<periods.length;i++){ if(now<periods[i].until){ cur=periods[i]; break; } }
     var today=document.getElementById('feeToday');
     if(today){ try{ today.textContent=new Intl.DateTimeFormat('en-GB',{day:'numeric',month:'long',year:'numeric',timeZone:'Europe/Ljubljana'}).format(now); }catch(e){ today.textContent=now.toDateString(); } }
     if(cur){
-      document.getElementById('feeName').textContent=cur.name;
-      document.getElementById('feePeriod').textContent=cur.period;
-      document.getElementById('feeAmount').textContent=cur.amount;
-      document.getElementById('r-fee').value=cur.name.replace(' registration','')+' – '+cur.amount;
+      document.getElementById('feeLabel').textContent=cur.amount+' – '+cur.name+' ('+cur.period+')';
+      document.getElementById('r-fee').value=cur.name+' – '+cur.short;
     } else {
-      document.getElementById('feeBox').hidden=true;
-      document.getElementById('feeNote').hidden=true;
-      document.getElementById('regClosed').hidden=false;
+      document.getElementById('regClosedLate').hidden=false;
       var btn=document.querySelector('#regForm button[type=submit]'); if(btn){ btn.disabled=true; btn.textContent='Registration closed'; }
     }
   })();
-  var same=document.getElementById('r-same'), payer=document.getElementById('payerFields');
-  function togglePayer(){ payer.hidden=same.checked; }
-  same.addEventListener('change',togglePayer); togglePayer();
 
   /* Where the form is sent: the Google Apps Script web app of the Google Sheet "SKAA 2027 – Registrations"
      (deployed 30 Oct 2026, see mail/google-sheets/SETUP.txt) – the sheet stores the registration and sends the
