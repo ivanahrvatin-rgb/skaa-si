@@ -18,7 +18,7 @@ window.SKAA_FACULTY = [
   {name:"David Martinčič", team:"ortho", role:"Speaker · Expert jury", photo:"assets/faculty/david-martincic.jpg", cv:"Biography to follow."},
   {name:"Àngel Masferrer", team:"ortho", role:"Battle · Speaker · Expert jury", photo:"assets/faculty/angel-masferrer.jpg", cv:"Biography to follow."},
   {name:"Jakob Merkač", team:"ortho", role:"Speaker · Expert jury", photo:"assets/faculty/jakob-merkac.jpg", cv:"Biography to follow."},
-  {name:"Nino Mirnik", team:"ortho", role:"Expert jury", photo:"", cv:"Biography and photo to follow."},
+  {name:"Nino Mirnik", team:"ortho", role:"Expert jury", photo:"assets/faculty/nino-mirnik.jpg", cv:"Biography to follow."},
   {name:"Marko Nabergoj", team:"ortho", role:"Speaker · Expert jury", photo:"assets/faculty/marko-nabergoj.jpg", cv:"Biography to follow."},
   {name:"Samo Novak", team:"ortho", role:"Speaker · Expert jury", photo:"assets/faculty/samo-novak.jpg", cv:"Biography to follow."},
   {name:"Boris Poberaj", team:"ortho", role:"Speaker · Expert jury", photo:"assets/faculty/boris-poberaj.jpg", cv:"Biography to follow."},
