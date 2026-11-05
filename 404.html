@@ -165,6 +165,12 @@ nav ul.sub a{display:block;font-size:.7rem;padding:9px 12px;border-radius:8px}
 .ssasst-text{font-family:"Roboto Condensed","Arial Narrow","DejaVu Sans Condensed",sans-serif;font-weight:300;font-size:36px;letter-spacing:.01em}
 /* flyer boxes */
 .boxes{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+/* call for abstracts – the prize and the publication, highlighted */
+.abs-box{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.abs-item{background:var(--box);border:3px solid var(--teal-deep);border-radius:12px;padding:18px 20px;box-shadow:4px 4px 0 var(--aqua);display:grid;gap:8px;align-content:start}
+.abs-item.prize{background:var(--aqua-soft);box-shadow:4px 4px 0 var(--lime)}
+.abs-item b{font-family:var(--display);font-weight:800;font-size:1.2rem;line-height:1.25;color:var(--teal-deep)}
+.abs-item span:last-child{font-size:.95rem;color:var(--fg)}
 .box{border:3px solid var(--teal-deep);border-radius:12px;background:var(--box);padding:18px 16px;text-align:center;font-family:var(--display);font-weight:800;font-size:1rem;color:var(--teal-deep);display:flex;align-items:center;justify-content:center;min-height:84px;box-shadow:4px 4px 0 var(--aqua)}
 .box.wide{grid-column:1/-1}
 
@@ -279,7 +285,7 @@ footer h3{color:#fff;font-size:.9rem;text-transform:uppercase;letter-spacing:.08
 footer .mail{color:#aee7ee;user-select:all}
 
 @media (max-width:860px){
-  .form-grid,.venue,.welcome,.venue-blocks{grid-template-columns:1fr}
+  .form-grid,.venue,.welcome,.venue-blocks,.abs-box{grid-template-columns:1fr}
   .slogan{justify-items:start;text-align:left}
   .hero-side{justify-items:start}
   .welcome-head{position:static}

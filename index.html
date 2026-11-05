@@ -166,6 +166,12 @@ nav ul.sub a{display:block;font-size:.7rem;padding:9px 12px;border-radius:8px}
 .ssasst-text{font-family:"Roboto Condensed","Arial Narrow","DejaVu Sans Condensed",sans-serif;font-weight:300;font-size:36px;letter-spacing:.01em}
 /* flyer boxes */
 .boxes{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+/* call for abstracts – the prize and the publication, highlighted */
+.abs-box{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.abs-item{background:var(--box);border:3px solid var(--teal-deep);border-radius:12px;padding:18px 20px;box-shadow:4px 4px 0 var(--aqua);display:grid;gap:8px;align-content:start}
+.abs-item.prize{background:var(--aqua-soft);box-shadow:4px 4px 0 var(--lime)}
+.abs-item b{font-family:var(--display);font-weight:800;font-size:1.2rem;line-height:1.25;color:var(--teal-deep)}
+.abs-item span:last-child{font-size:.95rem;color:var(--fg)}
 .box{border:3px solid var(--teal-deep);border-radius:12px;background:var(--box);padding:18px 16px;text-align:center;font-family:var(--display);font-weight:800;font-size:1rem;color:var(--teal-deep);display:flex;align-items:center;justify-content:center;min-height:84px;box-shadow:4px 4px 0 var(--aqua)}
 .box.wide{grid-column:1/-1}
 
@@ -280,7 +286,7 @@ footer h3{color:#fff;font-size:.9rem;text-transform:uppercase;letter-spacing:.08
 footer .mail{color:#aee7ee;user-select:all}
 
 @media (max-width:860px){
-  .form-grid,.venue,.welcome,.venue-blocks{grid-template-columns:1fr}
+  .form-grid,.venue,.welcome,.venue-blocks,.abs-box{grid-template-columns:1fr}
   .slogan{justify-items:start;text-align:left}
   .hero-side{justify-items:start}
   .welcome-head{position:static}
@@ -458,6 +464,29 @@ footer .mail{color:#aee7ee;user-select:all}
       <p>4–5 November 2027 · Day 1 Shoulder · Day 2 Knee · Orthopaedics vs Physiotherapy</p>
     </div>
     <div class="cta" style="margin-top:0"><a class="btn" href="programme.html">View the full programme</a><a class="btn" href="assets/SKAA2027_Programme_and_information.pdf" target="_blank" rel="noopener">Download programme (PDF)</a></div>
+  </div>
+</section>
+
+<section class="band" id="abstracts">
+  <div class="wrap">
+    <div class="sect-head">
+      <span class="eyebrow">Call for abstracts</span>
+      <h2>Poster abstracts &amp; Best Poster Awards</h2>
+      <p>Submit your abstract by <b>30 September 2027</b> in one of three categories – shoulder orthopaedics, knee orthopaedics and rehabilitation. Accepted posters are presented as e-posters in the Poster Battles, where the audience and an expert jury choose the winners.</p>
+    </div>
+    <div class="abs-box">
+      <div class="abs-item prize">
+        <span class="eyebrow">Best Poster Awards · the prize</span>
+        <b>A two-week fellowship with the SKAA faculty for the winner of each category</b>
+        <span>Three categories, three winners, three fellowships – announced at the closing of the symposium on 5 November 2027.</span>
+      </div>
+      <div class="abs-item">
+        <span class="eyebrow">Publication</span>
+        <b>Abstract book published in COBISS</b>
+        <span>All accepted abstracts are published in the electronic SKAA 2027 Abstract Book, issued at the end of the symposium and catalogued in COBISS, the Slovenian national bibliographic system.</span>
+      </div>
+    </div>
+    <div class="cta" style="margin-top:18px"><a class="btn" href="abstracts.html">Submission guidelines</a><span class="btn soon">Abstract submission will open shortly</span></div>
   </div>
 </section>
 
