@@ -7,7 +7,7 @@
    cv      – short CV (5–8 sentences); a blank line in the text starts a new paragraph
    slug    – optional: the subpage address is speaker.html#slug; when omitted it is made from the name */
 window.SKAA_FACULTY = [
-  {name:"Benjamin Marjanovič", team:"ortho", captain:true, role:"Team captain · Expert jury", photo:"", cv:"Biography and photo to follow."},
+  {name:"Benjamin Marjanovič", team:"ortho", captain:true, role:"Team captain · Expert jury", photo:"assets/faculty/benjamin-marjanovic.jpg", cv:"Biography to follow."},
   {name:"Bogdan Ambrožič", team:"ortho", role:"Speaker · Expert jury", photo:"", cv:"Biography and photo to follow."},
   {name:"Emmanouil Antonogiannakis", team:"ortho", role:"Battle · Speaker", photo:"", cv:"Biography and photo to follow."},
   {name:"Markas Fiodorovas", team:"ortho", role:"Battle · Speaker · Expert jury", photo:"", cv:"Biography and photo to follow."},
