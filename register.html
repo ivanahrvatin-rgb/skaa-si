@@ -309,7 +309,10 @@ footer .mail{color:#aee7ee;user-select:all}
 .fblock{border-top:1px dashed var(--line);padding-top:14px;display:grid;gap:8px}
 .flabel{font-weight:600;color:var(--fg);margin:0}
 .note.small{font-size:.86rem}
-.regcard .check b{font-family:var(--display);font-weight:800;color:var(--teal-deep)}
+.fee.auto{grid-template-columns:1fr auto;background:var(--aqua-soft);border-color:var(--teal)}
+.fee.auto>b{font-size:1.35rem}
+.regcard .row2.street{grid-template-columns:2fr 1fr}
+.regcard .row2,.regcard .row3{gap:10px}
 .card p{margin:0}
 .side .card{gap:12px}</style>
 </head>
@@ -370,15 +373,25 @@ footer .mail{color:#aee7ee;user-select:all}
         <h3 class="fh">Payer’s details</h3>
         <div class="stack">
           <label class="vh" for="p-name">Payer</label><input type="text" id="p-name" name="payer_name" placeholder="Payer (person, company or institution) *" required autocomplete="organization">
-          <label class="vh" for="p-addr">Payer’s full address (street, street number)</label><input type="text" id="p-addr" name="payer_address" placeholder="Payer’s full address (street, street number) *" required autocomplete="street-address">
-          <label class="vh" for="p-place">Place, post code, country</label><input type="text" id="p-place" name="payer_place" placeholder="Place, post code, country *" required>
+          <div class="row2 street">
+            <label class="vh" for="p-street">Street</label><input type="text" id="p-street" name="payer_street" placeholder="Street *" required autocomplete="address-line1">
+            <label class="vh" for="p-number">Street number</label><input type="text" id="p-number" name="payer_number" placeholder="Street number *" required>
+          </div>
+          <div class="row3">
+            <label class="vh" for="p-zip">Post code</label><input type="text" id="p-zip" name="payer_postal_code" placeholder="Post code *" required autocomplete="postal-code">
+            <label class="vh" for="p-city">City</label><input type="text" id="p-city" name="payer_city" placeholder="City *" required autocomplete="address-level2">
+            <label class="vh" for="p-country">Country</label><input type="text" id="p-country" name="payer_country" placeholder="Country *" required autocomplete="country-name">
+          </div>
           <label class="vh" for="p-vat">Payer’s VAT no. (if company or institution)</label><input type="text" id="p-vat" name="payer_vat" placeholder="Payer’s VAT no. (if company or institution)">
         </div>
 
         <div class="fblock">
           <p class="flabel">Registration fee <span class="req">*</span></p>
-          <label class="check"><input type="checkbox" id="r-feeok" name="fee_confirmed" required> <b id="feeLabel">220,00 EUR – Early bird (until 31 May 2027)</b></label>
-          <p class="note small">(Please confirm with checkbox) · The fee is determined by the date of registration (today: <span id="feeToday"></span>); all fees include VAT.</p>
+          <div class="fees" id="feeBox">
+            <div class="fee auto"><span><b id="feeName">Early bird registration</b><br><span class="note" id="feePeriod">until 31 May 2027</span></span><b id="feeAmount">220,00 EUR</b></div>
+          </div>
+          <label class="check"><input type="checkbox" id="r-feeok" name="fee_confirmed" required> I confirm the registration fee shown above and will pay it within 3 working days after registration. <span class="req">*</span></label>
+          <p class="note small">(Please confirm with checkbox) · The fee is determined automatically by the date of registration (today: <span id="feeToday"></span>); all fees include VAT.</p>
           <input type="hidden" id="r-fee" name="fee" value="Early bird – 220 EUR">
           <div class="done" id="regClosedLate" hidden><b>Registration closed</b><p>Online registration for SKAA 2027 closed on 31 October 2027. For late enquiries please contact the conference secretariat at info@skaa.si.</p></div>
         </div>
@@ -410,8 +423,8 @@ footer .mail{color:#aee7ee;user-select:all}
             <dt>VAT ID</dt><dd>SI21976562</dd>
             <dt>IBAN</dt><dd>SI56 0222 2001 9518 588 (NLB d.d.)</dd>
             <dt>SWIFT/BIC</dt><dd>LJBASI2X</dd>
+            <dt>Reference</dt><dd>SKAA 2027 + participant name</dd>
           </dl>
-          <button class="copy" type="button" id="copyPayee">Copy beneficiary details</button>
           <p class="note">All payments should include “SKAA 2027” and the participant’s name. All bank transfer fees must be covered by the payer. Invoices are issued by Zveza društev – Slovensko zdravniško društvo.</p>
         </div>
         <div class="card">
@@ -470,9 +483,12 @@ footer .mail{color:#aee7ee;user-select:all}
     var today=document.getElementById('feeToday');
     if(today){ try{ today.textContent=new Intl.DateTimeFormat('en-GB',{day:'numeric',month:'long',year:'numeric',timeZone:'Europe/Ljubljana'}).format(now); }catch(e){ today.textContent=now.toDateString(); } }
     if(cur){
-      document.getElementById('feeLabel').textContent=cur.amount+' – '+cur.name+' ('+cur.period+')';
+      document.getElementById('feeName').textContent=cur.name+' registration';
+      document.getElementById('feePeriod').textContent=cur.period;
+      document.getElementById('feeAmount').textContent=cur.amount;
       document.getElementById('r-fee').value=cur.name+' – '+cur.short;
     } else {
+      document.getElementById('feeBox').hidden=true;
       document.getElementById('regClosedLate').hidden=false;
       var btn=document.querySelector('#regForm button[type=submit]'); if(btn){ btn.disabled=true; btn.textContent='Registration closed'; }
     }
@@ -500,12 +516,6 @@ footer .mail{color:#aee7ee;user-select:all}
       .then(function(r){ return r.ok ? r.json() : Promise.reject(new Error('HTTP '+r.status)); })
       .then(function(j){ if(j && j.ok){ showDone(); btn.textContent='Registration sent'; } else { throw new Error((j&&j.error)||'Unknown error'); } })
       .catch(function(err){ btn.disabled=false; btn.textContent='Submit registration'; alert('Your registration could not be sent ('+err.message+'). Please try again or write to info@skaa.si.'); });
-  });
-  document.getElementById('copyPayee').addEventListener('click',function(){
-    var t='Zveza društev – Slovensko zdravniško društvo\nDunajska cesta 162, 1000 Ljubljana, Slovenia\nVAT ID: SI21976562\nIBAN: SI56 0222 2001 9518 588 (NLB d.d.)\nSWIFT/BIC: LJBASI2X\nReference: SKAA 2027 + participant name';
-    var btn=this;
-    function done(){ btn.textContent='Copied'; setTimeout(function(){btn.textContent='Copy beneficiary details';},1500); }
-    try{ navigator.clipboard.writeText(t).then(done,function(){ var r=document.createRange(); r.selectNodeContents(document.querySelector('.payee')); var s=getSelection(); s.removeAllRanges(); s.addRange(r); }); }catch(err){}
   });
 })();
 </script>
