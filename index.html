@@ -53,8 +53,10 @@ a{color:var(--teal)}
 .btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--display);font-weight:800;font-size:.9rem;letter-spacing:.04em;text-transform:uppercase;padding:14px 22px;border-radius:999px;text-decoration:none;cursor:pointer;border:3px solid var(--teal);background:var(--teal);color:#fff;transition:transform .15s,box-shadow .15s,background .15s}
 .btn.ghost{background:transparent;color:var(--teal-deep);border-color:var(--teal-deep)}
 .btn:hover{transform:translate(-1px,-1px);box-shadow:3px 3px 0 var(--aqua);background:var(--teal-deep);border-color:var(--teal-deep)}
-.btn.soon{background:var(--aqua-soft);color:var(--teal-deep);border-color:var(--line);box-shadow:none;cursor:default}
+.btn.soon{background:none;border:0;padding:0;box-shadow:none;cursor:default;color:var(--teal-deep);font-size:.95rem;letter-spacing:.02em;text-transform:none;font-weight:700}
 .btn.soon:hover{transform:none}
+.cta .btn.soon+.btn.soon{margin-left:22px}
+@media (max-width:520px){.cta .btn.soon+.btn.soon{margin-left:0}}
 .btn:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible,a:focus-visible{outline:3px solid var(--aqua);outline-offset:2px}
 .note{font-size:.95rem;color:var(--muted)}
 .todo{display:inline-block;font-family:var(--display);font-size:.7rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;background:#ffe9a8;color:#5a4300;padding:3px 8px;border-radius:4px;vertical-align:middle}
