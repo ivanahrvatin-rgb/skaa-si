@@ -10,7 +10,7 @@ window.SKAA_FACULTY = [
   {name:"Benjamin Marjanovič", team:"ortho", captain:true, role:"Team captain · Expert jury", photo:"assets/faculty/benjamin-marjanovic.jpg", cv:"Biography to follow."},
   {name:"Bogdan Ambrožič", team:"ortho", role:"Speaker · Expert jury", photo:"assets/faculty/bogdan-ambrozic.jpg", cv:"Biography to follow."},
   {name:"Emmanouil Antonogiannakis", team:"ortho", role:"Battle · Speaker", photo:"assets/faculty/emmanouil-antonogiannakis.jpg", cv:"Biography to follow."},
-  {name:"Markas Fiodorovas", team:"ortho", role:"Battle · Speaker · Expert jury", photo:"", cv:"Biography and photo to follow."},
+  {name:"Markas Fiodorovas", team:"ortho", role:"Battle · Speaker · Expert jury", photo:"assets/faculty/markas-fiodorovas.jpg", cv:"Biography to follow."},
   {name:"Boštjan Gosnik", team:"ortho", role:"Speaker · Expert jury", photo:"", cv:"Biography and photo to follow."},
   {name:"Neil Jain", team:"ortho", role:"Battle · Speaker · Expert jury", photo:"assets/faculty/neil-jain.jpg", cv:"Biography to follow."},
   {name:"Ladislav Kovačič", team:"ortho", role:"Speaker · Expert jury", photo:"assets/faculty/ladislav-kovacic.jpg", cv:"Biography to follow."},
