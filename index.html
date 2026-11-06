@@ -252,6 +252,11 @@ textarea{min-height:160px;resize:vertical}
 .welcome-head .sub{font-family:var(--display);font-weight:800;font-size:1.05rem;color:var(--teal-deep);line-height:1.3}
 .welcome-head .sub.muted{font-weight:600;color:var(--muted);font-size:.95rem}
 .welcome-head .motto{font-family:var(--display);font-weight:900;font-size:clamp(1.6rem,3vw,2.2rem);color:var(--teal);text-transform:uppercase;letter-spacing:.02em;line-height:1.05;margin-top:6px}
+.patronage{display:grid;gap:10px;margin-top:22px;padding-top:18px;border-top:2px solid var(--line)}
+.patronage .row{display:flex;flex-wrap:nowrap;align-items:center;gap:clamp(12px,2.5vw,32px);min-width:0}
+.patronage .row a{flex:0 1 auto;min-width:0;display:flex;align-items:center;transition:transform .15s}
+.patronage .row a:hover{transform:translateY(-2px)}
+.patronage img{height:clamp(72px,11vw,150px);width:auto;max-width:100%;object-fit:contain;object-position:left center}
 .letter{display:grid;gap:12px;max-width:68ch;min-width:0}
 .letter h3{margin-top:10px;font-size:1.25rem}
 .letter .salute{font-family:var(--display);font-weight:800;color:var(--teal-deep);font-size:1.35rem;line-height:1.3}
@@ -441,6 +446,12 @@ footer .mail{color:#aee7ee;user-select:all}
       <p class="sub">Shoulder &amp; Knee Arthroscopy to Arthroplasty Symposium</p>
       <p class="sub muted">Current concepts in shoulder and knee orthopaedics and rehabilitation</p>
       <p class="motto">From Injury to Play!</p>
+      <div class="patronage">
+        <span class="eyebrow">Under the patronage of</span>
+        <div class="row">
+          <a href="https://esska.org" target="_blank" rel="noopener" aria-label="ESSKA"><img src="assets/esska.png" alt="ESSKA – European Society of Sports Traumatology, Knee Surgery and Arthroscopy"></a>
+        </div>
+      </div>
     </div>
     <div class="letter">
       <p class="salute">Dear friends and colleagues,</p>
