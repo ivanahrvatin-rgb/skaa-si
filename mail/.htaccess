@@ -1,0 +1,5 @@
+# SKAA 2027 mail relay – only send.php may be called from the web
+Options -Indexes
+<FilesMatch "^(config\.php|config\.example\.php|.*\.log|.*\.md|.*\.txt)$">
+  Require all denied
+</FilesMatch>

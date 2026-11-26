@@ -3,7 +3,8 @@
 deployment:
   tasks:
     - export DEPLOYPATH=$HOME/public_html
-    - /bin/mkdir -p $DEPLOYPATH/assets/faculty $DEPLOYPATH/fonts
+    - /bin/mkdir -p $DEPLOYPATH/assets/faculty $DEPLOYPATH/fonts $DEPLOYPATH/mail/PHPMailer/src
     - /bin/cp -f *.html *.txt *.xml *.ico *.png faculty-data.js .htaccess $DEPLOYPATH/
     - /bin/cp -Rf assets/. $DEPLOYPATH/assets/
     - /bin/cp -Rf fonts/. $DEPLOYPATH/fonts/
+    - /bin/cp -Rf mail/. $DEPLOYPATH/mail/

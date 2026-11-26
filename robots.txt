@@ -1,4 +1,5 @@
 User-agent: *
+Disallow: /mail/
 Allow: /
 Disallow: /speaker.html
 
